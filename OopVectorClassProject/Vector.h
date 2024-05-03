@@ -20,6 +20,21 @@ public:
 };
 
 template <typename T>
+class VectorReverceIterator
+{
+	Vector<T>* container;
+	int indexCurrent{};
+public:
+	VectorIterator(Vector<T>* container)
+		: container{ container } {}
+
+	void Set();
+	void Next();
+	bool EndOf();
+	T Current();
+};
+
+template <typename T>
 class Vector
 {
 	size_t size{};
